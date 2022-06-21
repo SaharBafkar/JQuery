@@ -4,37 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project-2</title>
+    <title>Project-3</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="/project-2/project2.js"></script>
+    <script src="/project-3/project3.js"></script>
 </head>
 <style>
   
 </style>
 <body>
-<a href="" id="top"><i class="fas fa-chevron-up "></i></a>
+<a href="" class="modal-link">کلیک کنید</a>
+<div class="modal">
+  <p>محتوا</p>
+  <a href="" class="close"><i class="far fa-times-circle"></i></a>
+</div>
+<div class="bg-modal"></div>
 <script>
-    $(window).scroll(function () {
-  if ($(this).scrollTop() >= 50) {
-    // $("#top").fadeIn(500);
-    $('#top').css({
-        bottom:"20px"
-    });
-  } else {
-    $('#top').css({
-        bottom:"-60px"
-    // $("#top").fadeOut(500);
-  });
-}
-});
-$('#top').click(function(e) {
-  e.preventDefault()
-  $("body,html").animate({scrollTop: 0 },1000);
-});
-
+  
 </script>
     
 </body>
