@@ -1,0 +1,110 @@
+@font-face {
+  font-family: vazir;
+  src: url("/font/Vazirmatn-Medium.woff2");
+  font-weight: bolder;
+  font-style: normal;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: vazir;
+}
+body {
+  background-color: #d8e0e5;
+  direction: rtl;
+  font-size: 24px;
+  min-height: 100%;
+}
+a {
+  text-decoration: none;
+}
+li,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.circle-loader {
+  position: relative;
+  display: inline-block;
+  width: 250px;
+  height: 250px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-left-color: #1e90ff;
+  /* margin-bottom: 100px; */
+  margin-right: 596px;
+  border-radius: 50%;
+  animation: loader-spin 1.2s infinite linear;
+}
+@keyframes loader-spin{
+  0%{
+ transform: rotate(0);
+  }
+  100%{
+transform: rotate(360deg);
+  }
+}
+.checkmark-draw::after {
+  opacity: 1;
+  height: 120px;
+  content: "";
+  width: 50px;
+  border-right: 3px solid #5cb85c;
+  border-top: 3px solid #5cb85c;
+  position: absolute;
+  top: 119px;
+  left: 76px;
+  transform: rotate(223deg) scalex(-1);
+  transform-origin: left top;
+  animation: checkmark 800ms linear;
+}
+@keyframes checkmark {
+  0% {
+    opacity: 0;
+    height: 0;
+    width: 0;
+  }
+  35% {
+    opacity: 1;
+    height: 0;
+    width: 50px;
+  }
+  100% {
+    opacity: 1;
+    height: 120px;
+    width: 50px;
+  }
+}
+.course-title {
+text-align: center;
+  font-weight: bold;
+margin-top: 100px;
+  font-size: 34px;
+  color: rgb(0, 0, 0);
+}
+.load-complete{
+  animation: none;
+  border-color: #5cb85c;
+  transition: border-color .5s linear;
+}
+.checkmark-draw{
+  display: none;
+}
+.btn{
+  padding: 10px 48px;
+  border-radius: 5px;
+  border: 0;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #2ed573;
+  color: #fff;
+  outline: 0;
+  right: 647px;
+  top:466px;
+}
+p{
+  text-align: center;
+}
