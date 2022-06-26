@@ -1,0 +1,157 @@
+@font-face {
+  font-family: vazir;
+  src: url("/font/Vazirmatn-Medium.woff2");
+  font-weight: bolder;
+  font-style: normal;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: vazir;
+}
+body {
+  direction: rtl;
+  position: relative;
+  
+}
+a {
+  text-decoration: none;
+}
+li,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.course-title{
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  padding: 100px;
+  font-size: 34px;
+  color:white;
+}
+.wrapper{
+  width: 100%;
+  height: 100vh;
+  background-color: #1d1313;
+  position: absolute;
+  overflow: hidden;
+
+}
+span.menu{
+z-index: 99;
+position: absolute;
+top: 20px;
+left: 10px;
+width: 35px;
+height: 4px;
+background-color: #fff;
+cursor: pointer;
+}
+.wrapper span.menu::before, .wrapper span.menu::after{
+  content: '';
+  position: absolute;
+  display: block;
+  left: 0;
+  background-color: #fff;
+  width: 35px;
+  height: 4px;
+}
+.wrapper span.menu::before{
+  top:-8px
+}
+.wrapper span.menu::after{
+  bottom:-8px;
+}
+.title h1{
+  color: #30c4c9;
+}
+.title{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.overlay{
+  background-color: palevioletred;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left:0;
+  bottom: -99%;
+  transition: all 1s ease;
+}
+.overlay ul{
+  width: 100%;
+  text-align: center;
+  margin-top: 335px;
+  padding-left: 0 ;
+  margin-left: -10px;
+  font-size: 16px;
+}
+.overlay ul li{
+  margin:20px 0;
+
+}
+.overlay ul li a{
+color: #fff;
+position: relative;
+display: inline-block;
+overflow: hidden;
+}
+
+.overlay ul li a::after{
+  display: block;
+  border: 2px;
+  content: '';
+  left: 0;
+  bottom: -10px;
+  height: 5px;
+  background-color: #fff;
+  transform: translateX(-101%);
+}
+
+.overlay ul li a:hover::after{
+  animation: border-anime .5s ease normal;
+ }
+@keyframes border-anime{
+  0%{
+    transform: translateX(-100%);
+  }
+  100%{
+    transform: translateX(0);
+  }
+}
+.anim{
+  left: 0;
+  bottom: 0;
+  width: 25%;
+  transition: all .5s ease;
+  animation: menu-anime 1.5s ease-out forwards;
+}
+@keyframes menu-anime {
+  0%{
+    left:0;
+    bottom:-99%;
+    width:100%;
+  }
+  33%{
+    left:-99%;
+    bottom:-99%;
+    width:100%;
+  }
+  66%{
+    left:-99%;
+    bottom:0;
+    width:100%;
+  }
+  100%{
+    left:0;
+    bottom:0;
+    width:25%;
+  }
+}
