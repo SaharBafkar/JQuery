@@ -1,0 +1,115 @@
+@font-face {
+  font-family: vazir;
+  src: url("/font/Vazirmatn-Medium.woff2");
+  font-weight: bolder;
+  font-style: normal;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: vazir;
+}
+body {
+  background-color: #d0dde9;
+  max-width: 800px;
+  direction: rtl;
+  font-size: 16px;
+  min-height: 100%;
+  text-align: center;
+  margin: 100px auto 0;
+  overflow: hidden;
+}
+.course-title{
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 34px;
+  color:black
+}
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  margin-top: 150px;
+  width: 600px;
+}
+.toast{
+  text-align: right;
+  padding: 20px 0;
+  background-color: #fff;
+  border-radius: 4px;
+  min-width: 500px;
+  position: relative;;
+  top: 0;
+  margin-bottom: 20px;
+  box-shadow: 1px 7px 14px -5px rgba(0,0,0,.2);
+}
+.toast::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 4px;
+  height: 100%;
+  border-radius: 0 4px 4px 0;
+  background-color: green;
+
+}
+.toast-icon{
+  position: absolute;
+  top: 30%;
+  right: 22px;
+  width: 14px;
+  height:14px ;
+  padding: 7px;
+  display: inline-block;
+  background-color: rgb(46, 116, 52);
+  border-radius: 50%;
+}
+.toast-type{
+  color: #cecece;
+  font-weight: 700;
+  margin-bottom: 8px;
+  font-size: 15px;
+}
+.toast-message{
+  color: #878787;
+  font-size: 14px;
+
+}
+.toast-content{
+  padding: 0 60px;
+
+}
+.toast-close {
+  position: absolute;
+  left:60% ;
+  top:30%;
+  width: 14px;
+  height: 14px;
+  cursor: pointer;
+  fill: #878787;
+  color: #878787;
+}
+.toast-green .toast-icon{
+  background-color: green;
+}
+.toast-green::before{
+  background-color: green;
+}
+.toast-blue .toast-icon{
+background-color: blue;
+}
+.toast-blue::before{
+  background-color: blue;
+}
+.toast-yellow .toast-icon{
+  background-color: yellow;
+}
+.toast-yellow::before{
+  background-color: yellow;
+}
