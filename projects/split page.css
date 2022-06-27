@@ -1,0 +1,159 @@
+@font-face {
+  font-family: vazir;
+  src: url("/font/Vazirmatn-Medium.woff2");
+  font-weight: bolder;
+  font-style: normal;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: vazir;
+}
+a {
+  text-decoration: none;
+}
+li,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+html,
+body {
+  background-color: #ffffff;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  /* text-align: center; */
+}
+.course-title {
+  
+text-align:center;  
+  font-size: 34px;
+  color: black; 
+}
+h1{
+  color: rgb(255, 255, 255);
+  font-size: 36px;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  white-space:nowrap;
+  text-align: center;
+}
+h1::after{
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 4px;
+  left: 0;
+  bottom: -8px;
+  background-color: #fff;
+  transition: all .7s ease-in-out;
+}
+h1:hover::after{
+  width:100% ;
+}
+
+a.call-to-action{
+  display: block;
+  position: absolute;
+  height: 50px;
+  width: 120px;
+  /* background-color: red; */
+  line-height: 50px;
+  left: 50%;
+  bottom: 10%;
+  transform: translate(-50%,-50%);
+  border: 2px solid rgb(255, 255, 255);
+  font-size: 18px;
+  font-weight: 400;
+  color:#fff;
+  text-align: center;
+}
+a.call-to-action::before{
+content: '';
+background-color: #fff;
+position: absolute;
+height: 0;
+width: 100%;
+bottom: 0;
+left: 0;
+transition: all 300ms ease-in-out;
+}
+a.call-to-action:hover::before{
+  height: 4px;
+}
+.container{
+  /* background-color: #09f; */
+  width: 100vw;
+  height: 100vh;
+}
+.container .one-half{
+  position: absolute;
+  /* background-color: red; */
+  width: 50%;
+ height: 100%;
+}
+.container .left{
+  left: 0;
+  background-image: url(/img/download.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: all 800ms ease-in-out;
+}
+.container .left::before{
+  content: '';
+  width: 100%;
+  height: 100%;
+  background:rgba(255,0,120,.5);
+  position: absolute;
+}
+  .container .right{
+    right: 0;
+    background-image: url(/img/images.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: all 800ms ease-in-out;
+  }
+  .container .right::before{
+    content: '';
+    width: 100%;
+  height: 100%;
+  background:rgba(25,120,220,.5);
+  position: absolute;
+  }
+  .container .left::before,
+  .container .right::before{
+    transition: all 500ms ease-in-out;
+  }
+  .left-is-hoverd .left{
+    width: 85%;
+  }
+  .left-is-hoverd .left h1::after{
+    width: 100%;
+  }
+  .left-is-hoverd .right{
+    width: 15%;
+
+  }
+  .left-is-hoverd .right::before{
+    background:rgba(0,0,0,.5);
+  }
+  .right-is-hoverd .right{
+    width: 85%;
+  }
+  .right-is-hoverd .right h1::after{
+    width: 100%;
+  }
+  .right-is-hoverd .left{
+    width: 15%;
+
+  }
+  .right-is-hoverd .left::before{
+    background:rgba(0,0,0,.5);
+  }
