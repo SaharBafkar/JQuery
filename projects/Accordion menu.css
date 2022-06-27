@@ -1,0 +1,87 @@
+@font-face {
+  font-family: vazir;
+  src: url("/font/Vazirmatn-Medium.woff2");
+  font-weight: bolder;
+  font-style: normal;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: vazir;
+}
+a {
+  text-decoration: none;
+}
+li,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+html, body {
+  background-color: #c3c397;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+.course-title {
+  margin: 100px;
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 34px;
+  color: black;
+}
+.collapse-menu{
+  width: 600px;
+  margin: 0 auto;
+  text-align: right;
+  /* height: 500px; */
+}
+.collapse-panel{
+  border: 1px solid #b5bcc2;
+
+}
+.collapse-heading{
+  height: 40px;
+  background-color: #70a1ff;
+  padding: 0 15px;
+  line-height: 45px;
+  position: relative
+}
+.collapse-trigger{
+  color: #fff;
+  font-size: 15px;
+  overflow: hidden;
+  width: 100%;
+  display: block;
+}
+.collapse-controls{
+  position: absolute;
+  left: 12px;
+  top: 0;
+  transition: all .1s linear;
+  }
+  .open {
+    transform: rotate(180deg);
+    top: -3px;
+
+  }
+  .collapse-controls i{
+    color: #fff;
+    /* font-size: 22px; */
+  }
+  .collapse-body{
+    padding: 15px;
+    background-color:#fff;
+    color: rgb(59, 59, 59);
+    font-size: 15px;
+    text-align: justify;
+    line-height: 30px;
+   }
+   .collapse-body{
+     display: none;
+   }
