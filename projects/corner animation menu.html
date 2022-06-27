@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project7-corner animation menu</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <link rel="stylesheet" href="style.css">
+   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- <script src="jquery-3.6.0.min.js"></script> -->
+    <script>
+        $(document).ready(function(){
+           $('.menu-btn').click(function(){
+                $('#circle-menu').addClass('active');
+               
+           })
+        })
+
+    </script>
+</head>
+
+<body>
+
+    <p class="course-title">پروژه شماره هفت</p>
+    <div id="circle-menu" class="circle-menu ">
+        <a class="menu-btn" href=""><i class="fa fa-plus"></i></a>
+        <nav class="items-wrapper">
+            <a href="" class="menu-item fa fa-home"></a>
+            <a href="" class="menu-item fa fa-user"></a>
+            <a href="" class="menu-item fa fa-chart-pie"></a>
+            <a href="" class="menu-item fa fa-cog"></a>
+        </nav>
+    </div>
+
+      
+
+
+</body>
+
+
+</html>
