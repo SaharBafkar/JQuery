@@ -1,0 +1,181 @@
+@font-face {
+  font-family: vazir;
+  src: url("/font/Vazirmatn-Medium.woff2");
+  font-weight: bolder;
+  font-style: normal;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: vazir;
+}
+
+body {
+  /* background-color: #d0dde9; */
+  width: 100%;
+    height: 100%;
+  
+  
+}
+.course-title {
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 34px;
+  color: black
+}
+/* .fig-0{
+  width: 50px;
+  height: 50px;
+  display: flex;
+  flex-direction:column ;
+  margin: 27px 107px;
+}
+.fig-1{
+  width: 50px;
+  height: 50px;
+  display: flex;
+  margin: 27px 107px;
+
+}
+.fig-2{
+  width: 50px;
+  height: 50px;
+  display: flex;
+  margin: 49px 99px;
+
+}
+.fig-3{
+  width: 50px;
+  height: 50px;
+  display: flex;
+  margin: 49px 99px;
+
+}
+.fig-4{
+  width: 50px;
+  height: 50px;
+  display: flex;
+  margin: 49px 99px;
+
+}
+.fig-5{
+  width: 50px;
+  height: 50px;
+  display: flex;
+  margin: 49px 99px;
+
+} */
+ .container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  font-size: 50px;
+  margin-top: 200px;
+}
+
+.rating {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  overflow: hidden;
+  height: 150px;
+  background-color: #ccc;
+  flex-direction: row-reverse;
+  position: relative;
+} 
+
+ .fig-0 {
+  filter: grayscale(100%);
+ }
+
+.rating >input {
+  display: none;
+}
+
+.rating >label {
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  margin-top: auto;
+  background-image: url(/img/star-1.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 76%;
+  transition: .5s ease;
+}
+
+.rating >input:checked~label,
+.rating >input:checked~label~label{
+  background-image: url("/img/star-3.png");
+}
+.rating >input:unchecked~label,
+.rating >input:un ~ label~label{
+  background-image: url("/img/star-1.png");
+}
+
+.rating >input:not(:checked)~label:hover,
+.rating >input:not(:checked)~label:hover~label{
+  background-image: url("/img/star-2.png")
+}
+ 
+.feedback{
+  max-width: 360px;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 30px rgba(0,0,0,.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+position: relative;
+}
+
+.emoji-wrapper{
+  width: 100%;
+  text-align: center;
+  height: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+/* z-index: 100; */
+
+}
+
+.emoji{
+  transition: .3s;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.emoji>img{
+  margin: 15px 0;
+  width: 70px;
+  height: 70px;
+}
+
+#rating-1:checked~.emoji-wrapper>.emoji{
+  transform: translateY(-100px);
+}
+#rating-2:checked~.emoji-wrapper>.emoji{
+  transform: translateY(-200px);
+}
+#rating-3:checked~.emoji-wrapper>.emoji{
+  transform: translateY(-300px);
+}
+#rating-4:checked~.emoji-wrapper>.emoji{
+  transform: translateY(-400px);
+}
+#rating-5:checked~.emoji-wrapper>.emoji{
+  transform: translateY(-500px);
+}
+#rating-6:checked~.emoji-wrapper>.emoji{
+  transform: translateY(-520px);
+} 
