@@ -1,0 +1,86 @@
+@font-face {
+  font-family: vazir;
+  src: url("/font/Vazirmatn-Medium.woff2");
+  font-weight: bolder;
+  font-style: normal;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: vazir;
+}
+
+body {
+  /* background-color: #d0dde9; */
+  width: 100%;
+  height: 100%;
+}
+.course-title {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 34px;
+  color: black;
+}
+.tabbed {
+  width: 700px;
+  margin: 50px auto;
+}
+.tabbed input {
+  display: none;
+}
+.tabbed label {
+  color: rgb(143, 143, 143);
+  display: block;
+  float: right;
+  padding: 3px 20px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s;
+}
+.tabbed label:hover,
+.tabbed input:checked + label {
+  background-color: #56a6f1;
+  color: #fff;
+}
+.tabs {
+  clear: both;
+  perspective: 600px;
+}
+.tabs h2 {
+  color: #000;
+  padding: 30px 0;
+  font-size: 22px;
+  border-bottom: 1px solid #efefef;
+}
+.tabs p {
+  margin-top: 30px;
+  color: #6d6d6d;
+  line-height: 32px;
+  text-align: justify;
+  font-size: 16px;
+}
+.tabs > div {
+  width: 700px;
+  background-color: #fff;
+  position: absolute;
+  border: 2px solid #efefef;
+  border-top: 0;
+  padding: 10px 30px 40px;
+  transform: rotatex(-20deg);
+  transform-origin: top center;
+  transition: opacity 0.3s, transform 1s;
+  opacity: 0;
+  z-index: 0;
+}
+#tab-nav-1:checked ~ .tabs > div:nth-of-type(1),
+#tab-nav-2:checked ~ .tabs > div:nth-of-type(2),
+#tab-nav-3:checked ~ .tabs > div:nth-of-type(3),
+#tab-nav-4:checked ~ .tabs > div:nth-of-type(4) {
+  transform: rotateX(0);
+  opacity: 1;
+  z-index: 1;
+}
