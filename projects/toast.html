@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project-8-toast</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+
+<body>
+
+    <p class="course-title">پروژه شماره هشت</p>
+    <div class="container">
+        <div class="toast toast-green">
+            <div class="toast-icon"></div>
+            <div class="toast-content">
+                <p class="toast-type">عملیات موفق</p>
+                <p class="toast-message">پیام شما با موفقیت ثبت شد </p>
+            </div>
+            <div class="toast-close">
+                <svg viewPort="0 0 12 12" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="1" y1="11" x2="11" y2="1" stroke="black" stroke-width="2" />
+                    <line x1="1" y1="1" x2="11" y2="11" stroke="black" stroke-width="2" />
+                </svg>
+            </div>
+        </div>
+        <div class="toast toast-blue">
+            <div class="toast-icon"></div>
+            <div class="toast-content">
+                <p class="toast-type"> اعلانات</p>
+                <p class="toast-message"> نام کاربری و کلمه عبور به زودی برای شماارسال خواهد شد </p>
+            </div>
+            <div class="toast-close">
+                <svg viewPort="0 0 12 12" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="1" y1="11" x2="11" y2="1" stroke="black" stroke-width="2" />
+                    <line x1="1" y1="1" x2="11" y2="11" stroke="black" stroke-width="2" />
+                </svg>
+            </div>
+        </div>
+        <div class="toast toast-yellow">
+            <div class="toast-icon"></div>
+            <div class="toast-content">
+                <p class="toast-type">هشدار </p>
+                <p class="toast-message">. برای تغییر کلمه عبور خود اقدام نمایید </p>
+            </div>
+            <div class="toast-close">
+                <svg viewPort="0 0 12 12" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="1" y1="11" x2="11" y2="1" stroke="black" stroke-width="2" />
+                    <line x1="1" y1="1" x2="11" y2="11" stroke="black" stroke-width="2" />
+                </svg>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.toast-close').click(function () {
+                var parent = $(this).parent('.toast');
+                parent.fadeOut('slow', function () {
+                    $(this).remove();
+                });
+            });
+            $('.toast-green').delay(5000).fadeOut('slow', function () {
+                $(this).remove();
+            });
+        });
+
+    </script>
+
+</body>
+
+
+</html>
