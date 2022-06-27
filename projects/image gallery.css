@@ -1,0 +1,65 @@
+@font-face {
+  font-family: vazir;
+  src: url("/font/Vazirmatn-Medium.woff2");
+  font-weight: bolder;
+  font-style: normal;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: vazir;
+}
+a {
+  text-decoration: none;
+}
+li,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+html, body {
+  background-color: #c3c397;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+.course-title {
+  margin: 100px;
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 34px;
+  color: black;
+}
+.image-galary{
+  max-width: 720px;
+  margin: 10px auto;
+  transition: all 1s ease;
+}
+.image-gallary img{
+  width: 500px;
+  height: auto;
+  /* display: block; */
+  border: 4px solid #ededed;
+  box-shadow: 0 2px 25px rgba(0,0,0,.2);
+  
+}
+ul.thumbnails{
+  /* margin: 0 auto; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+ul.thumbnails li{
+  margin: 0 10px;
+}
+ul.thumbnails li a img{
+  border: 4px solid #ededed;
+  box-shadow: 0 2px 25px rgba(0,0,0,.2);
+  max-width: 100px;
+}
